@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //Q1
+    // console.log(1 + "2" + "2");
+    // This statement prints 122, as JS is not type bound, meaning that type of 1 is changed to string,
+    // giving us the output
+
+    // console.log(1 + +"2" + "2");
+    // In this case, 1++"2" takes the numeric type into consideration, as ++ forces JS to do numeric
+    // addition. This gives out the result as 3 (a numeric value). When 3+"2" is performed, 32 is received
+    // as the output, as JS is not type bound, leading to string concatenation.
+    
+    // console.log(1 + -"1" + "2");
+    // In this case, 1+-"1" takes the numeric type into consideration, as +- forces JS to do numeric
+    // subtraction. This gives out the result as 0 (a numeric value). When 0+"2" is performed, 
+    // 02 is received as the output, as JS is not type bound, leading to string concatenation.
+    
+    // console.log(+"1" + "1" + "2");
+    // Basic string concatenation performed, giving 112 as output.
+
+    // console.log( "A" - "B" + "2");
+    //"A"-"B" is operation between string, giving NaN (undefined Not-a-number value) as output.
+    // When NaN encounters +"2", string concatenation takes place (as JS is not type bound), 
+    // leading to the final output being NaN2.
+
+    // console.log( "A" - "B" + 2);
+    //"A"-"B" is operation between string, giving NaN (undefined Not-a-number value) as output.
+    // When NaN encounters +2, an undefined output is received, hence the output is NaN.
+
+    //Q2
+    var marks=85;
+    if (marks>90)
+    {
+        console.log("AA");
+    }
+    else if (marks>80 && marks<=90)
+    {
+        console.log("AB");
+    }
+    else if (marks>70 && marks<=80)
+    {
+        console.log("BB");
+    }
+    else if (marks>60 && marks<=70)
+    {
+        console.log("BC");
+    }
+    else if (marks>50 && marks<=60)
+    {
+        console.log("CC");
+    }
+    else if (marks>40 && marks<=50)
+    {
+        console.log("CD");
+    }
+    else if (marks>30 && marks<=40)
+    {
+        console.log("DD");
+    }
+    else
+    {
+        console.log("FF");
+    }
+</script>
+</body>
+</html>
